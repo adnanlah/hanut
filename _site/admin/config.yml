@@ -1,0 +1,16 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update
+  # media_folder: "_site/images/uploads"
+  # public_folder: "/images/uploads"
+collections:
+  - name: "products"
+    label: "Posts"
+    folder: "products"
+    create: true
+    slug: "{{year}}-{{slug}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "products.njk"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - {label: "Date", name: "date", widget: "string"}

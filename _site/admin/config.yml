@@ -5,12 +5,12 @@ backend:
   # public_folder: "/images/uploads"
 collections:
   - name: "products"
-    label: "Posts"
+    label: "Products"
     folder: "products"
     create: true
     slug: "{{year}}-{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "products.njk"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "product.njk"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Date", name: "date", widget: "string"}

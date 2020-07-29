@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: master # Branch to update
+media_folder: "_site/images/uploads"
+public_folder: "/images/uploads"
 collections:
   - name: "products" # Used in routes, e.g., /admin/collections/blog
     label: "Products" # Used in the UI

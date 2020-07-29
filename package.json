@@ -1,0 +1,15 @@
+{
+  "name": "eleventy-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "netlify-cms": "^2.10.55"
+  }
+}

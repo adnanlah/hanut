@@ -1,13 +1,14 @@
-<ul>
-  {% for product in collections.products %}
-  <li>
-    <strong>
-      <a href="{{ product.url | url }}">{{ product.data.name }}</a>
-    </strong>
-    -
-    <time datetime="{{ product.date }}">{{ product.date }}</time>
-    -
-    <span>{{ product.data.description }}</span>
-  </li>
-  {% endfor %}
-</ul>
+<div class="flex">
+{% for product in collections.products %}
+   <div class="w-1/4 m-2 rounded-md bg-gray-200">
+      <a href="{{ product.url | url }}" >
+         <img src="_assets/img/1660s.jpg" alt="product-pic">
+         <div class="flex justify-between p-2">
+            <div>{{ product.data.name }}</div>
+            <div>{{ product.data.price }}</div>
+         </div>
+      </a>
+   </div>
+   <!-- <time datetime="{{ product.date }}">{{ product.date }}</time> -->
+{% endfor %}
+</div>

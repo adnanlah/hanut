@@ -1,27 +1,37 @@
----
-siteTitle: Hanut app
----
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>{{siteTitle}}: {{title}}</title>
-    <link rel="stylesheet" href="../_assets/_css/style.compiled.css">
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  	<head>
+	    <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <title>{{metadata.siteTitle}}: {{title}}</title>
+	    <link rel="stylesheet" href="_assets/css/style.compiled.css">
+	    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     </head>
-  <body class="bg-dark">
-    <div class="bg-white">{{ content | safe }}</div>
-    <script>
-		if (window.netlifyIdentity) {
-		  window.netlifyIdentity.on("init", user => {
-		    if (!user) {
-		      window.netlifyIdentity.on("login", () => {
-		        document.location.href = "/admin/";
-		      });
-		    }
-		  });
-		}
-	</script>
-  </body>
+	<body class="bg-gray-900">
+		<header class="bg-white p-6 text-center">
+			<div class="mb-3">
+				<h2 class="text-3xl">{{metadata.siteTitle}}</h2>
+				<h4>{{metadata.description}}</h4>
+			</div>
+			<h4>{{metadata.address}}</h4>
+
+		</header>
+		<main class="p-6 my-0 mx-auto w-5/6">
+			{{ content | safe }}
+		</main>
+		<footer>
+			
+		</footer>
+		<script>
+			if (window.netlifyIdentity) {
+			  window.netlifyIdentity.on("init", user => {
+			    if (!user) {
+			      window.netlifyIdentity.on("login", () => {
+			        document.location.href = "/admin/";
+			      });
+			    }
+			  });
+			}
+		</script>
+	</body>
 </html>

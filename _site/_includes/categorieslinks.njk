@@ -1,13 +1,12 @@
+<h2 class="text-2xl mb-2">Categories</h2>
+
+{% for parcategory in catdata %}
+<h3 class="p-1 my-1 text-1xl bg-gray-200 rounded-md">+ {{parcategory}}</h3>
 <ul>
-  {% for category in collections.categories %}
-  <li>
-    <strong>
-      <a href="{{ category.url | url }}">{{ category.data.name }}</a>
-    </strong>
-    -
-    <time datetime="{{ category.date }}">{{ category.date }}</time>
-    -
-    <span>{{ category.data.description }}</span>
-  </li>
-  {% endfor %}
+{% for category in collections[parcategory] %}
+<li class="p-1 my-1">
+<a href="{{ category.url | url }}">{{ category.data.name }}</a>
+</li>
+{% endfor %}
 </ul>
+{% endfor %}

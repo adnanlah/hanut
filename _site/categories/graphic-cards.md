@@ -1,4 +1,6 @@
 ---
 layout: category.njk
-name: graphiccards
+name: Graphic cards
+id: graphiccards
+tags: components
 ---

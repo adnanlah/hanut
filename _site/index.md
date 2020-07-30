@@ -1,30 +1,16 @@
 ---
+title: Welcome
 date: Created
 layout: base
-tags:
-  - home
-  - welcome
-  - info
 ---
 
-# Welcome to Hanut app
+<div class="text-3xl mb-3 text-white">Newest products</div>
 
-**Date**: {{ page.date.toUTCString() }}
-
-**By**: {{ pkg.author }}
-
-<ul>
-  {% for item in tags %}
-  <li>{{ item }}</li>
-  {% endfor %}
-</ul>
-
-The **JAMStack** is part of a family of techniques for creating sites called `serverless`, but those techniques can be a bit confusing.
-
-In this course I'm going to show you how to create serverless sites using a static site generator called **Eleventy** and help you demystify the JAMStack.
-
-We'll talk about what serverless is and why it can be faster and more secure than working with regular websites. We'll explore a **node.js** based platform called Eleventy that gives you a fantastic engine for creating JAMStack sites and apps.
-
-<h1>All products</h1>
-{% include "productslinks.njk" %}
-{% include "categorieslinks.njk" %}
+<div class="flex">
+<div class="w-1/5 p-2 bg-white">
+	{% include "categorieslinks.njk" %}
+</div>
+<div class="flex-1 ml-3 bg-white">
+	{% include "productslinks.njk" %}
+</div>
+</div>

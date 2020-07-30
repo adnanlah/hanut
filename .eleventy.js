@@ -1,9 +1,6 @@
 module.exports = function(eleventyConfig) {
-
-  // eleventyConfig.addPassthroughCopy('./_site/images');
-  // eleventyConfig.addPassthroughCopy('./_site/css');
-  // eleventyConfig.addPassthroughCopy('admin')
-  eleventyConfig.addPassthroughCopy('**/config.yml')
+  eleventyConfig.addPassthroughCopy('_site/admin')
+  eleventyConfig.addPassthroughCopy('_site/_assets')
   // eleventyConfig.addLayoutAlias('base', 'pageTemplates/base.njk');
   // eleventyConfig.addLayoutAlias('page', 'pageTemplates/page.njk');
   // eleventyConfig.addLayoutAlias('page-hero', 'pageTemplates/page-hero.njk');

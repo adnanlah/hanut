@@ -1,0 +1,13 @@
+<ul>
+  {% for category in collections.categories %}
+  <li>
+    <strong>
+      <a href="{{ category.url | url }}">{{ category.data.name }}</a>
+    </strong>
+    -
+    <time datetime="{{ category.date }}">{{ category.date }}</time>
+    -
+    <span>{{ category.data.description }}</span>
+  </li>
+  {% endfor %}
+</ul>

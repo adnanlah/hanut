@@ -2,7 +2,7 @@
   {% for product in collections.products %}
   <li>
     <strong>
-      <a href="{{ product.url | url }}">{{ product.data.title }}</a>
+      <a href="{{ product.url | url }}">{{ product.data.name }}</a>
     </strong>
     -
     <time datetime="{{ product.date }}">{{ product.date }}</time>

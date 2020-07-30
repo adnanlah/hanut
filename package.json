@@ -4,6 +4,7 @@
   "description": "",
   "main": ".eleventy.js",
   "scripts": {
+    "build-css": "tailwindcss build _site/_assets/css/style.css -o _site/_assets/css/style.compiled.css",
     "build": "eleventy",
     "watch": "eleventy --watch",
     "serve": "eleventy --serve"
@@ -15,6 +16,9 @@
     "netlify-cms": "^2.10.55"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0"
+    "@11ty/eleventy": "^0.11.0",
+    "del-cli": "^3.0.1",
+    "luxon": "^1.24.1",
+    "tailwindcss": "^1.6.0"
   }
 }

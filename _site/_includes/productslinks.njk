@@ -1,8 +1,7 @@
-<div class="flex">
-{% for product in collections.products %}
-   <div class="w-1/4 m-2 rounded-md bg-gray-200">
+{% for product in products %}
+   <div class=" bg-gray-200">
       <a href="{{ product.url | url }}" >
-         <img src="_assets/img/1660s.jpg" alt="product-pic">
+         <img src="/_assets/img/1660s.jpg" alt="product-pic">
          <div class="flex justify-between p-2">
             <div>{{ product.data.name }}</div>
             <div>{{ product.data.price }}</div>
@@ -11,4 +10,3 @@
    </div>
    <!-- <time datetime="{{ product.date }}">{{ product.date }}</time> -->
 {% endfor %}
-</div>

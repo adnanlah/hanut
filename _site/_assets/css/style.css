@@ -3,5 +3,17 @@
 @tailwind utilities;
 
 body {
-	background: red;
+	@apply text-gray-800
+}
+
+.pagination .page-item {
+	@apply p-1 bg-white rounded-sm text-black mx-1
+}
+
+.pagination .page-item-active {
+	@apply font-bold
+}
+
+.pagination .page-item-disabled {
+	@apply text-gray-400
 }

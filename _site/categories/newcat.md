@@ -1,9 +1,9 @@
 ---
 pagination:
- data: collections.motherboards
+ data: collections.newcat
  size: 5
 permalink: /category/{{name}}/{{pagination.pageNumber+1}}/index.html
-name: motherboards
+name: newcat
 tags: components
 ---
 {% include "paginateproducts.njk" %}

@@ -18033,6 +18033,35 @@ video {
           animation: bounce 1s infinite;
 }
 
+body {
+  --text-opacity: 1;
+  color: #2d3748;
+  color: rgba(45, 55, 72, var(--text-opacity))
+}
+
+.pagination .page-item {
+  padding: 0.25rem;
+  --bg-opacity: 1;
+  background-color: #fff;
+  background-color: rgba(255, 255, 255, var(--bg-opacity));
+  border-radius: 0.125rem;
+  --text-opacity: 1;
+  color: #000;
+  color: rgba(0, 0, 0, var(--text-opacity));
+  margin-left: 0.25rem;
+  margin-right: 0.25rem
+}
+
+.pagination .page-item-active {
+  font-weight: 700
+}
+
+.pagination .page-item-disabled {
+  --text-opacity: 1;
+  color: #cbd5e0;
+  color: rgba(203, 213, 224, var(--text-opacity))
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

@@ -1,9 +1,9 @@
 ---
 pagination:
- data: collections.motherboards
+ data: collections.graphiccards
  size: 5
 permalink: /category/{{name}}/{{pagination.pageNumber+1}}/index.html
-name: motherboards
+name: graphiccards
 tags: components
 ---
 {% include "paginateproducts.njk" %}

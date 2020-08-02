@@ -1,0 +1,23 @@
+<nav class="pagination flex">
+{% if pagination.previous %}
+<div class="page-item">
+<a href="{{ pagination.previous | url }}">Prev</a>
+</div>
+{% else %} 
+<div class="page-item page-item-disabled">
+<span>Prev</span>
+</div>
+{% endif %} 
+{% for link in pagination.links %} 
+<div class="page-item {% if (pagination.pageNumber + 1) == loop.index %}page-item-active{% endif %}"><a href="{{ link | url }}">{{ loop.index }}</a></div>
+{% endfor %} 
+{% if pagination.next %}  
+<div class="page-item">
+<a href="{{ pagination.next | url }}">Next</a>
+</div>
+{% else %} 
+<div class="page-item page-item-disabled">
+<span>Next</span>
+</div>
+{% endif %}
+</nav>

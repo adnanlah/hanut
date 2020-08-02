@@ -1,3 +1,4 @@
 {
-	"tags": "categories"
+	"tags": "categories",
+	"layout": "base.njk"
 }

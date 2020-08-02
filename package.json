@@ -13,10 +13,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@infinity-interactive/eleventy-plugin-injector": "0.0.9",
     "netlify-cms": "^2.10.55"
   },
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.6",
     "del-cli": "^3.0.1",
     "luxon": "^1.24.1",
     "tailwindcss": "^1.6.0"

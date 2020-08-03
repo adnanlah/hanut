@@ -37,6 +37,12 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
+      - label: "Pagination"
+        name: "paginationn"
+        widget: "object"
+        fields:
+          - {label: "Data", name: "data", widget: "string", default: 'collections.{{fields.name}}'}
+          - {label: "Size", name: "size", widget: "number", default: 5}
       - label: "Parentcategory"
         name: "parent"
         widget: "relation"

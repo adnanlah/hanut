@@ -41,7 +41,7 @@ collections:
         name: "parent"
         widget: "relation"
         collection: "categories"
-        file: "categoriesList"
-        valueField: "listItem.*.name"
-        searchFields: ["listItem.*.name"]
-        displayFields: ["listItem.*.name"]
+        file: "parentCategories"
+        valueField: "categoriesList.*.name"
+        searchFields: ["categoriesList.*.name"]
+        displayFields: ["categoriesList.*.name"]

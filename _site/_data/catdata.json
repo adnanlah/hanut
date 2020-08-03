@@ -1,4 +1,10 @@
-[
-	"components",
-	"other"
-]
+{
+  "list": [
+    {
+      "name": "components"
+    },
+    {
+      "name": "other"
+    }
+  ]
+}

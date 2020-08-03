@@ -6,8 +6,17 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_site/admin')
   eleventyConfig.addPassthroughCopy('_site/_assets')
   
+  let listFiles = []
+  fs.readdirSync(path.resolve(__dirname, './_site/categories/')).forEach(file => {
+    if (file.split('.').pop() !== 'md')
+      return;
+    listFiles.push(path.resolve(__dirname, './_site/categories/', file))
+  });
+
+  console.log({listFiles})
+
   eleventyConfig.addPlugin(pluginInjector, {
-    watch: path.resolve(__dirname, './_site/categories/cases.md'),
+    watch: listFiles,
     inject: (eleventyInstance, options, file) => {
       const categoryName = path.basename(file).split('.')[0];
       const filetext = fs.readFileSync(file, 'utf-8');

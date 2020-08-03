@@ -13,14 +13,12 @@ module.exports = function(eleventyConfig) {
     listFiles.push(path.resolve(__dirname, './_site/categories/', file))
   });
 
-  console.log({listFiles})
-
   eleventyConfig.addPlugin(pluginInjector, {
     watch: listFiles,
     inject: (eleventyInstance, options, file) => {
       const categoryName = path.basename(file).split('.')[0];
       const filetext = fs.readFileSync(file, 'utf-8');
-      console.log(path.resolve(__dirname, './_site/categories/**.md'))
+
       if (!filetext.includes('pagination')) {
 
         let paginationText = `\npagination:\n`
@@ -28,13 +26,12 @@ module.exports = function(eleventyConfig) {
           + ` size: 5\n`
           + `permalink: /category/{{name}}/{{pagination.pageNumber+1}}/index.html\n`
                  
-        let content = `\n{% include "paginateproducts.njk" %}`;
+        let include = `\n{% include "paginateproducts.njk" %}`;
 
         let newtext = filetext.replace('\n', paginationText);
-        newtext += content;
+        newtext += include;
 
         try {
-          console.log('writing file')
           fs.writeFileSync(path.resolve(__dirname, `./_site/categories/${categoryName}.md`), newtext);
         } catch(e) {
           console.log('error writing', e.message)

@@ -4,6 +4,15 @@ backend:
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
+  - name: "categories"
+    label: "Parentcategories"
+    extension: "json"
+    files:
+      - file: '_site/_data/catdata.json'
+        label: 'cats'
+        name: 'cats'
+        fields:
+          - {label: "Name", name: "name", widget: "string"}
   - name: "products" # Used in routes, e.g., /admin/collections/blog
     label: "Products" # Used in the UI
     folder: "_site/products" # The path to the folder where the documents are stored
@@ -15,11 +24,10 @@ collections:
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Price", name: "price", widget: "string"}
       - {label: "Date", name: "date", widget: "date"}
-  - name: "categories"
-    label: "Categories"
+  - name: "subcategories"
+    label: "Subcategories"
     folder: "_site/categories"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Layout", name: "layout", widget: "hidden", default: "base.njk"}
       - {label: "Name", name: "name", widget: "string"}

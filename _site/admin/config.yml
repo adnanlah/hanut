@@ -38,3 +38,10 @@ collections:
     slug: "{{slug}}"
     fields:
       - {label: "Name", name: "name", widget: "string"}
+      - label: "Parentcategory"
+        name: "parent"
+        widget: "relation"
+        collection: "categories"
+        valueField: "name"
+        searchFields: ["name"]
+        displayFields: ["name"]

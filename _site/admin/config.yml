@@ -7,14 +7,13 @@ collections:
   - name: "categories"
     label: "Categories"
     extension: "json"
-    create: true
     files:
       - file: '_site/_data/catdata.json'
         label: 'List of categories'
-        name: 'list'
+        name: 'categoriesList'
         fields:
           - label: "List"
-            name: "list"
+            name: "listItem"
             widget: "list"
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}
@@ -42,6 +41,6 @@ collections:
         name: "parent"
         widget: "relation"
         collection: "categories"
-        valueField: "list.*.name"
-        searchFields: ["list"]
-        displayFields: ["list.*.name"]
+        valueField: "listItem.*.name"
+        searchFields: ["listItem"]
+        displayFields: ["listItem.*.name"]

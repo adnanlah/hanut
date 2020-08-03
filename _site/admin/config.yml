@@ -11,10 +11,14 @@ collections:
     files:
       - file: '_site/_data/catdata2.json'
         label: 'List of categories'
-        name: 'list'
+        name: 'liste'
         fields:
-          - {label: "Name", name: "name", widget: "list", default: ["led", "fan"]}
-          - {label: "Date", name: "date", widget: "date"}
+          - label: "listee"
+            name: "listeee"
+            widget: "list"
+            fields:
+              - {label: 'Name', name: 'name', widget: 'string'}
+  
   - name: "products" # Used in routes, e.g., /admin/collections/blog
     label: "Products" # Used in the UI
     folder: "_site/products" # The path to the folder where the documents are stored

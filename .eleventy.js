@@ -7,11 +7,11 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_site/_assets')
   
   eleventyConfig.addPlugin(pluginInjector, {
-    watch: '_site/categories/**.md',
+    watch: path.resolve(__dirname, './_site/categories/**.md'),
     inject: (eleventyInstance, options, file) => {
       const categoryName = path.basename(file).split('.')[0];
       const filetext = fs.readFileSync(file, 'utf-8');
-      console.log({categoryName})
+      console.log(path.resolve(__dirname, './_site/categories/**.md'))
       if (!filetext.includes('pagination')) {
 
         let paginationText = `\npagination:\n`
@@ -26,7 +26,7 @@ module.exports = function(eleventyConfig) {
 
         try {
           console.log('writing file')
-          fs.writeFileSync(`_site/categories/${categoryName}.md`, newtext);
+          fs.writeFileSync(path.resolve(__dirname, `./_site/categories/${categoryName}.md`), newtext);
         } catch(e) {
           console.log('error writing', e.message)
         }

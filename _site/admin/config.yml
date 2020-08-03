@@ -10,10 +10,10 @@ collections:
     files:
       - file: '_site/_data/catdata.json'
         label: 'List of categories'
-        name: 'categoriesList'
+        name: 'parentCategories'
         fields:
           - label: "List"
-            name: "listItem"
+            name: "categoriesList"
             widget: "list"
             fields:
               - {label: 'Name', name: 'name', widget: 'string'}

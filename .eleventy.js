@@ -7,7 +7,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_site/_assets')
   
   eleventyConfig.addPlugin(pluginInjector, {
-    watch: path.resolve(__dirname, './_site/categories/.'),
+    watch: path.resolve(__dirname, './_site/categories/cases.md'),
     inject: (eleventyInstance, options, file) => {
       const categoryName = path.basename(file).split('.')[0];
       const filetext = fs.readFileSync(file, 'utf-8');

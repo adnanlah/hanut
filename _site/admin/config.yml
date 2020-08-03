@@ -4,15 +4,15 @@ backend:
 media_folder: "_site/images/uploads"
 public_folder: "/images/uploads"
 collections:
-  - name: "categories"
+  - name: "parentcategories"
     label: "Parentcategories"
     extension: "json"
     files:
-      - file: '_site/_data/catdata.json'
-        label: 'cats'
+      - file: '_site/_data/catdata2.json'
+        label: 'Cats'
         name: 'cats'
         fields:
-          - {label: "Name", name: "name", widget: "string"}
+          - {label: "Name", name: "name", widget: "list"}
   - name: "products" # Used in routes, e.g., /admin/collections/blog
     label: "Products" # Used in the UI
     folder: "_site/products" # The path to the folder where the documents are stored

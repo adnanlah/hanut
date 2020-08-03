@@ -42,6 +42,6 @@ collections:
         name: "parent"
         widget: "relation"
         collection: "categories"
-        valueField: "name"
-        searchFields: ["name"]
-        displayFields: ["name"]
+        valueField: "list.*.name"
+        searchFields: ["list"]
+        displayFields: ["list.*.name"]

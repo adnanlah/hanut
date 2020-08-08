@@ -1,6 +1,6 @@
 <h2 class="text-2xl mb-2">Categories</h2>
 
-{% for parcategory in catdata.list %}
+{% for parcategory in catdata.categoriesList %}
 <h3 class="px-1 py-1 my-1 text-1xl bg-gray-200 rounded-md font-semibold">+ {{parcategory.name}}</h3>
 <ul>
 {% for category in collections[parcategory.name] %}

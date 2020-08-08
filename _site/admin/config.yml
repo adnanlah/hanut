@@ -22,13 +22,19 @@ collections:
     label: "Products" # Used in the UI
     folder: "_site/products" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - {label: "Layout", name: "layout", widget: "hidden", default: "product.njk"}
       - {label: "Name", name: "name", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Price", name: "price", widget: "string"}
       - {label: "Date", name: "date", widget: "date"}
+      - label: "Pagination"
+        name: "pagination"
+        widget: "object"
+        fields:
+         - {label: "Data", name: "data", widget: "paginate"}
+         - {label: "Size", name: "size", widget: "hidden", default: 5}
 
   - name: "subcategories"
     label: "Subcategories"

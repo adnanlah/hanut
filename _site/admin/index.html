@@ -9,5 +9,37 @@
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+  	var PaginateControl = createClass({
+	  handleChange: function(e) {
+	  	const name = document.querySelector('#name-field-1');
+	    this.props.onChange(`"collections.${name.value}"`);
+	  },
+
+	  render: function() {
+	    return null;
+	  	const name = document.querySelector('#name-field-1');
+	    var value = this.props.value;
+	    // return h('input', {
+	    //   id: this.props.forID,
+	    //   className: this.props.classNameWrapper,
+	    //   type: 'text',
+	    //   value: value ? `${value}` : `collections`,
+	    //   onChange: this.handleChange,
+	    // });
+	  },
+	});
+
+	// var CategoriesPreview = createClass({
+	//   render: function() {
+	//   	return null;
+	//     var value = this.props.value;
+	//     return h('h2', {}, 'hi');
+	//   }
+	// });
+	
+	CMS.registerWidget('paginate', PaginateControl);
+
+  </script>
 </body>
 </html>

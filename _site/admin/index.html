@@ -18,25 +18,21 @@
 
 	  render: function() {
 	    return null;
+
 	  	const name = document.querySelector('#name-field-1');
 	    var value = this.props.value;
-	    // return h('input', {
-	    //   id: this.props.forID,
-	    //   className: this.props.classNameWrapper,
-	    //   type: 'text',
-	    //   value: value ? `${value}` : `collections`,
-	    //   onChange: this.handleChange,
-	    // });
+	    return h('input', {
+	      id: this.props.forID,
+	      className: this.props.classNameWrapper,
+	      type: 'text',
+	      value: value ? `${value}` : `collections`,
+	      onChange: this.handleChange,
+	      isValid = () => {
+		    return true;
+		  }
+	    });
 	  },
 	});
-
-	// var CategoriesPreview = createClass({
-	//   render: function() {
-	//   	return null;
-	//     var value = this.props.value;
-	//     return h('h2', {}, 'hi');
-	//   }
-	// });
 	
 	CMS.registerWidget('paginate', PaginateControl);
 

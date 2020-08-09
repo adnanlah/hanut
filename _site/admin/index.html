@@ -12,25 +12,30 @@
   <script>
   	var PaginateControl = createClass({
 	  handleChange: function(e) {
+	  	console.log('From handleChange')
 	  	const name = document.querySelector('#name-field-1');
-	    this.props.onChange(`"collections.${name.value}"`);
+	  	name.addEventListener('input', e => {
+	  		console.log(e.target.value)
+	    	this.props.onChange(`"collections.${name.value}"`);
+	  	})
+	  },
+
+	  componentDidMount: function() {
+	  	console.log('from componentDidMount')
+	  	this.handleChange()
 	  },
 
 	  render: function() {
 	    return null;
-
-	  	const name = document.querySelector('#name-field-1');
-	    var value = this.props.value;
-	    return h('input', {
-	      id: this.props.forID,
-	      className: this.props.classNameWrapper,
-	      type: 'text',
-	      value: value ? `${value}` : `collections`,
-	      onChange: this.handleChange,
-	      isValid = () => {
-		    return true;
-		  }
-	    });
+	    // var value = this.props.value;
+	    // console.log({value})
+	    // return h('input', {
+	    //   id: this.props.forID,
+	    //   className: this.props.classNameWrapper,
+	    //   type: 'text',
+	    //   value: `${value}`,
+	    //   onLoad: this.handleChange
+	    // });
 	  },
 	});
 	

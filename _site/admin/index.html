@@ -14,10 +14,12 @@
 	  handleChange: function(e) {
 	  	console.log('From handleChange')
 	  	const name = document.querySelector('#name-field-1');
-	  	name.addEventListener('input', e => {
-	  		console.log(e.target.value)
-	    	this.props.onChange(`"collections.${name.value}"`);
-	  	})
+	  	if (name) {
+		  	name.addEventListener('input', e => {
+		  		console.log(e.target.value)
+		    	this.props.onChange(`collections.${name.value}`);
+		  	})
+	  	}
 	  },
 
 	  componentDidMount: function() {

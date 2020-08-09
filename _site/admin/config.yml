@@ -51,3 +51,7 @@ collections:
         fields:
          - {label: "Data", name: "data", widget: "paginate"}
          - {label: "Size", name: "size", widget: "hidden", default: 5}
+      - label: "Permalink"
+        name: "permalink"
+        widget: "hidden"
+        default: "permalink: /category/{{name}}/{{pagination.pageNumber+1}}/index.html"

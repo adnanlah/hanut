@@ -1,5 +1,5 @@
 ---
-name: wifi
+name: wifis
 parent: components
 pagination:
   size: 5

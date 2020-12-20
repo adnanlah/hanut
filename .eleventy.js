@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const pluginInjector = require("@infinity-interactive/eleventy-plugin-injector");
 
+// addded a coment here
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('_site/admin')
   eleventyConfig.addPassthroughCopy('_site/_assets')
